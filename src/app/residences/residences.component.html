@@ -6,7 +6,11 @@
             <img [src]="residence.image" class="card-img-top" alt="...">
             <div class="card-body">
               <h3 class="card-title">{{residence.name}}</h3>
-              <h3 class="card-text">{{residence.status}}</h3>
+              <h3 class="card-text">
+                <span *ngIf="residence.status=== 'Disponible'">✅ Disponible</span>
+                <span *ngIf="residence.status=== 'Vendu'">❌ Vendu</span>
+                <span *ngIf="residence.status=== 'En Construction'">🚧 En Construction</span>
+              </h3>
  <button class="btn btn-primary" (click)="showAddress(residence.address)">
   Show location
 </button>
