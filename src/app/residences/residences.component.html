@@ -1,5 +1,6 @@
+<input type="text" [(ngModel)]="searchText" class="form-control mb-3" placeholder="Search by address...">
 <div class="row">
-  <div *ngFor="let residence of listResidences; let i = index" class="col-md-4 mb-4">
+  <div *ngFor="let residence of filteredResidences; let i = index" class="col-md-4 mb-4">
     <div class="card">
       <img [src]="residence.image" class="card-img-top" alt="{{ residence.name }}" />
       <div class="card-body">
@@ -23,7 +24,7 @@
   </div>
 </div>
 <div class="mt-5">
-  <h2>⭐ Favorite Residences</h2>
+  <h2>⭐ Favorite Residences ⭐</h2>
 
   <div class="row">
     <div *ngFor="let residence of listFav; let i = index" class="col-md-4 mb-4">
@@ -40,7 +41,6 @@
             <button class="btn btn-primary" (click)="showAddress(residence.address)">
               Show location
             </button>
-            <button class="btn btn-outline-primary" (click)="addFav(i)">❤️ Add to Favorites</button>
           </div>
           <h1 *ngIf="selectedAddress === residence.address" class="mt-3">
             {{ residence.address }}
