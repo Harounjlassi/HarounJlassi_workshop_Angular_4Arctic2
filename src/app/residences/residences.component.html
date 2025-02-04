@@ -7,18 +7,15 @@
             <div class="card-body">
               <h3 class="card-title">{{residence.name}}</h3>
               <h3 class="card-text">{{residence.status}}</h3>
-              <h3 class="card-text">{{residence.address}}</h3>
-             
-              <button  class="btn btn-primary" *ngIf="residence.address!=='Inconnu'  ; else showAddress(residence.address)" >Show location
-             
-               
-              </button>      
-              <ng-template #f>
-                {{residence.address}}
+ <button class="btn btn-primary" (click)="showAddress(residence.address)">
+  Show location
+</button>
 
-              </ng-template>
+<h1 *ngIf="selectedAddress === residence.address">
+  {{ residence.address }}
+</h1>
             </div>
-          
+
             
             </div>
  

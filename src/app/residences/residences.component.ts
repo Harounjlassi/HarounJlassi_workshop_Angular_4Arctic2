@@ -19,14 +19,16 @@ export class ResidencesComponent {
     {id:4,"name": "El Anber","address":"inconnu",
     "image":"../../assets/images/R4.png", status: "En Construction"}
     ];
+  
+    selectedAddress: string ='';
 
-    showAddress(address: string){
-      if(address=="Inconnu"){
-      alert("Inconnu");
-      }else {
-        alert("Incdonnu");
+    showAddress(address: string) {
+      if (address.toLowerCase() === 'inconnu') {
+        alert('Address is unknown!');
+      } else {
+        this.selectedAddress = address ;
 
       }
-    }
+}
 }
 
