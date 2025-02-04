@@ -1,27 +1,52 @@
-
-<div class="row" *ngFor="let residence of listResidences; let i = index">
-
-
-        <div class="card" style="width: 18rem;">
-            <img [src]="residence.image" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h3 class="card-title">{{residence.name}}</h3>
-              <h3 class="card-text">
-                <span *ngIf="residence.status=== 'Disponible'">✅ Disponible</span>
-                <span *ngIf="residence.status=== 'Vendu'">❌ Vendu</span>
-                <span *ngIf="residence.status=== 'En Construction'">🚧 En Construction</span>
-              </h3>
- <button class="btn btn-primary" (click)="showAddress(residence.address)">
-  Show location
-</button>
-
-<h1 *ngIf="selectedAddress === residence.address">
-  {{ residence.address }}
-</h1>
-            </div>
-
-            
-            </div>
- 
-  
+<div class="row">
+  <div *ngFor="let residence of listResidences; let i = index" class="col-md-4 mb-4">
+    <div class="card">
+      <img [src]="residence.image" class="card-img-top" alt="{{ residence.name }}" />
+      <div class="card-body">
+        <h3 class="card-title">{{ residence.name }}</h3>
+        <h3 class="card-text">
+          <span *ngIf="residence.status === 'Disponible'" class="badge bg-success">✅ Disponible</span>
+          <span *ngIf="residence.status === 'Vendu'" class="badge bg-danger">❌ Vendu</span>
+          <span *ngIf="residence.status === 'En Construction'" class="badge bg-warning">🚧 En Construction</span>
+        </h3>
+        <div class="d-grid gap-2">
+          <button class="btn btn-primary" (click)="showAddress(residence.address)">
+            Show location
+          </button>
+          <button class="btn btn-outline-primary" (click)="addFav(i)">❤️ Add to Favorites</button>
+        </div>
+        <h1 *ngIf="selectedAddress === residence.address" class="mt-3">
+          {{ residence.address }}
+        </h1>
+      </div>
     </div>
+  </div>
+</div>
+<div class="mt-5">
+  <h2>⭐ Favorite Residences</h2>
+
+  <div class="row">
+    <div *ngFor="let residence of listFav; let i = index" class="col-md-4 mb-4">
+      <div class="card">
+        <img [src]="residence.image" class="card-img-top" alt="{{ residence.name }}" />
+        <div class="card-body">
+          <h3 class="card-title">{{ residence.name }}</h3>
+          <h3 class="card-text">
+            <span *ngIf="residence.status === 'Disponible'" class="badge bg-success">✅ Disponible</span>
+            <span *ngIf="residence.status === 'Vendu'" class="badge bg-danger">❌ Vendu</span>
+            <span *ngIf="residence.status === 'En Construction'" class="badge bg-warning">🚧 En Construction</span>
+          </h3>
+          <div class="d-grid gap-2">
+            <button class="btn btn-primary" (click)="showAddress(residence.address)">
+              Show location
+            </button>
+            <button class="btn btn-outline-primary" (click)="addFav(i)">❤️ Add to Favorites</button>
+          </div>
+          <h1 *ngIf="selectedAddress === residence.address" class="mt-3">
+            {{ residence.address }}
+          </h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

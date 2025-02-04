@@ -19,7 +19,7 @@ export class ResidencesComponent {
     {id:4,"name": "El Anber","address":"inconnu",
     "image":"../../assets/images/R4.png", status: "En Construction"}
     ];
-  
+    listFav:Residence[]=[];
     selectedAddress: string ='';
 
     showAddress(address: string) {
@@ -29,6 +29,11 @@ export class ResidencesComponent {
         this.selectedAddress = address ;
 
       }
+}
+
+addFav(i:number){
+this.listFav.push(this.listResidences[i]);
+
 }
 }
 
