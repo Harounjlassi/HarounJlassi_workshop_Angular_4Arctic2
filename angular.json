@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/project1",
+            "outputPath": "dist/my-angular-app-od"
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -98,5 +98,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "4df26165-7ad9-45e9-815b-6fa31aac6979"
   }
 }
