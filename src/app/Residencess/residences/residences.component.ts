@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Residence } from '../model/Residence';
+import { Residence } from '../../model/Residence';
 
 @Component({
   selector: 'app-residences',

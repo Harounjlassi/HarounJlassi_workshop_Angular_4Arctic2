@@ -6,11 +6,15 @@ import { AppComponent } from './app.component';
 import { FirstComponent } from './first/first.component';
 import { HeaderComponent } from './header/header.component';
 import { FormsModule } from '@angular/forms';
-import { ResidencesComponent } from './residences/residences.component';
+import { ResidencesComponent } from './Residencess/residences/residences.component';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { ResidenceDetailComponentComponent } from './residence-detail-component/residence-detail-component.component';
+import { ResidenceDetailComponentComponent } from './Residencess/residence-detail-component/residence-detail-component.component';
+import { AddResidenceComponent } from './Residencess/add-residence/add-residence.component';
+import { ApartmentsComponentComponent } from './Apartments/apartments-component/apartments-component.component';
+import { ApartmentsByResidenceComponentComponent } from './Apartments/apartments-by-residence-component/apartments-by-residence-component.component';
+import { AddApartmentComponentComponent } from './Apartments/add-apartment-component/add-apartment-component.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +26,11 @@ import { ResidenceDetailComponentComponent } from './residence-detail-component/
     HomeComponent,
     FooterComponent,
     NotFoundComponent,
-    ResidenceDetailComponentComponent
+    ResidenceDetailComponentComponent,
+    AddResidenceComponent,
+    ApartmentsComponentComponent,
+    ApartmentsByResidenceComponentComponent,
+    AddApartmentComponentComponent
   ],
   imports: [
     BrowserModule,

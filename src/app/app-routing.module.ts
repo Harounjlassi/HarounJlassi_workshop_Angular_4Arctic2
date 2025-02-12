@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { ResidencesComponent } from './residences/residences.component';
+import { ResidencesComponent } from './Residencess/residences/residences.component';
 const routes: Routes = [];
 
 const ROUTES: Routes = [ 
