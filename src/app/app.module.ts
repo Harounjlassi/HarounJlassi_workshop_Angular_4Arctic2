@@ -10,11 +10,11 @@ import { ResidencesComponent } from './Residencess/residences/residences.compone
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { ResidenceDetailComponentComponent } from './Residencess/residence-detail-component/residence-detail-component.component';
 import { AddResidenceComponent } from './Residencess/add-residence/add-residence.component';
 import { ApartmentsComponentComponent } from './Apartments/apartments-component/apartments-component.component';
 import { ApartmentsByResidenceComponentComponent } from './Apartments/apartments-by-residence-component/apartments-by-residence-component.component';
 import { AddApartmentComponentComponent } from './Apartments/add-apartment-component/add-apartment-component.component';
+import { ResidencesDetailsComponent } from './Residencess/residences-details/residences-details.component';
 
 @NgModule({
   declarations: [
@@ -26,11 +26,11 @@ import { AddApartmentComponentComponent } from './Apartments/add-apartment-compo
     HomeComponent,
     FooterComponent,
     NotFoundComponent,
-    ResidenceDetailComponentComponent,
+    ResidencesDetailsComponent,
     AddResidenceComponent,
     ApartmentsComponentComponent,
     ApartmentsByResidenceComponentComponent,
-    AddApartmentComponentComponent
+    AddApartmentComponentComponent,
   ],
   imports: [
     BrowserModule,

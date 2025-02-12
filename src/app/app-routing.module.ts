@@ -6,15 +6,18 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ResidencesComponent } from './Residencess/residences/residences.component';
+import { Residence } from './model/Residence';
+import { ResidencesDetailsComponent } from './Residencess/residences-details/residences-details.component';
 const routes: Routes = [];
 
 const ROUTES: Routes = [ 
   {path:'',redirectTo:'/app',pathMatch:'full'},
   {path:'header',component:HeaderComponent},
-  {path:'app',component:AppComponent},
   {path:'footer',component:FooterComponent},
   {path:'home',component:ResidencesComponent},
-  {path:'notfound',component:NotFoundComponent},
+  {path:'residences',component:ResidencesComponent},
+  {path:'details/:id',component:ResidencesDetailsComponent},
+  {path:'**',component:NotFoundComponent},
   
 ];
 

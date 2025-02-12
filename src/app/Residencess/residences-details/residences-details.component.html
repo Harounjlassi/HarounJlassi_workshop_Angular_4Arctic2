@@ -1,0 +1,33 @@
+
+<div class="row"style="width: 18rem;">
+    <div class="card">
+      <img [src]="res?.image" class="card-img-top" alt="{{ res?.name }}" />
+      <div class="card-body">
+        <h3 class="card-title">{{ res?.name }}</h3>
+        <h3 class="card-text">
+          <span *ngIf="res?.status === 'Disponible'" class="badge bg-success">✅ Disponible</span>
+          <span *ngIf="res?.status === 'Vendu'" class="badge bg-danger">❌ Vendu</span>
+          <span *ngIf="res?.status === 'En Construction'" class="badge bg-warning">🚧 En Construction</span>
+        </h3>
+        <div class="d-grid gap-2">
+          <div class="d-flex gap-2 justify-content-start">
+
+            <button class="btn btn-primary" (click)="showAddress(res?.address||'')">
+              📍 Show Location
+            </button>
+        
+    
+            <button class="btn btn-outline-secondary" (click)="navigateToDetails(res?.id)">
+                -> Next
+            </button>
+          </div>
+        
+          
+        </div>
+        
+        <h1 *ngIf="selectedAddress === res?.address" class="mt-3">
+          {{ res?.address }}
+        </h1>
+      </div>
+    </div>
+  </div>
