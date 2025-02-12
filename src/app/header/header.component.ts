@@ -7,14 +7,15 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
-  link1: string= 'Home';
-  link2: string= 'Residences';
-  url: string= 'http://www.esprit.tn';
+  link1: string= 'home';
+  link2: string= 'residences';
+/*  link3: string= '';
+  link4: string= 'Residences';
+  link5: string= 'Residences';
+*/
+  url: string= '';
   color: string= '';
   
-  clickMe(){
-    alert('Hello');
-  }
 
 
 }
