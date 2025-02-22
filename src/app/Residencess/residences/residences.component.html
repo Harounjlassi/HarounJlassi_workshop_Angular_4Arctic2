@@ -13,6 +13,7 @@
           <span *ngIf="residence.status === 'Vendu'" class="badge bg-danger">❌ Vendu</span>
           <span *ngIf="residence.status === 'En Construction'" class="badge bg-warning">🚧 En Construction</span>
         </h3>
+        
         <div class="d-grid gap-2">
           <div class="d-flex gap-2 justify-content-start">
             <button class="btn btn-primary" (click)="showAddress(residence.address)">

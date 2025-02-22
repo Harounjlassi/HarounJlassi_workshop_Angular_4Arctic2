@@ -16,36 +16,105 @@ export class ResidencesDetailsComponent {
 
   constructor(private act: ActivatedRoute,private router:Router) {}
 
-  listResidences: Residence[] = [
-      {
-        id: 1,
-        name: 'El fel',
-        address: 'Borj Cedria',
-        image: '../../assets/images/R1.png',
-        status: 'Disponible',
+ listResidences: Residence[] = [
+    {
+      id: 1,
+      name: 'El fel',
+      address: 'Borj Cedria',
+      image: '../../assets/images/R1.png',
+      status: 'Disponible',
+      Apartments: [
+        {apartNum :1,
+          floorNum: 1,
+          surface: 100,
+          terrace: true,
+          surfaceterrace: 50,
+          category: 'A',
+          ResidenceId: 1,
+        },
+        { apartNum :2,
+          floorNum: 2, 
+          surface: 120,
+          terrace: false,
+          surfaceterrace: 0,
+          category: 'B',
+          ResidenceId: 2,
+        }]
+    
+    },
+    {
+      id: 2,
+      name: 'El yasmine',
+      address: 'Ezzahra',
+      image: '../../assets/images/R2.png',
+      status: 'Disponible',
+      Apartments:[{apartNum :1,
+        floorNum: 1,
+        surface: 100,
+        terrace: true,
+        surfaceterrace: 50,
+        category: 'A',
+        ResidenceId: 1,
       },
-      {
-        id: 2,
-        name: 'El yasmine',
-        address: 'Ezzahra',
-        image: '../../assets/images/R2.png',
-        status: 'Disponible',
+      { apartNum :2,
+        floorNum: 2, 
+        surface: 120,
+        terrace: false,
+        surfaceterrace: 0,
+        category: 'B',
+        ResidenceId: 2,
+      }
+    ]
+
+    },
+    {
+      id: 3,
+      name: 'El Arij',
+      address: 'Rades',
+      image: '../../assets/images/R3.png',
+      status: 'Vendu',
+      Apartments:[ {apartNum :1,
+        floorNum: 1,
+        surface: 100,
+        terrace: true,
+        surfaceterrace: 50,
+        category: 'A',
+        ResidenceId: 1,
       },
-      {
-        id: 3,
-        name: 'El Arij',
-        address: 'Rades',
-        image: '../../assets/images/R1.png',
-        status: 'Vendu',
+      { apartNum :2,
+        floorNum: 2, 
+        surface: 120,
+        terrace: false,
+        surfaceterrace: 0,
+        category: 'B',
+        ResidenceId: 2,
+      }]
+    },
+  
+    {
+      id: 4,
+      name: 'El Anber',
+      address: 'inconnu',
+      image: '../../assets/images/R4.png',
+      status: 'En Construction',
+      Apartments:[ {apartNum :1,
+        floorNum: 1,
+        surface: 100,
+        terrace: true,
+        surfaceterrace: 50,
+        category: 'A',
+        ResidenceId: 1,
       },
-      {
-        id: 4,
-        name: 'El Anber',
-        address: 'inconnu',
-        image: '../../assets/images/R2.png',
-        status: 'En Construction',
-      },
-    ];
+      { apartNum :2,
+        floorNum: 2, 
+        surface: 120,
+        terrace: false,
+        surfaceterrace: 0,
+        category: 'B',
+        ResidenceId: 2,
+      }]
+    },
+  ];
   
   ngOnInit() {
     this.router.routeReuseStrategy.shouldReuseRoute = () => false; // Force reload on param change
