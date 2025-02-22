@@ -5,7 +5,7 @@
 <div class="row">
   <div *ngFor="let residence of filteredResidences; let i = index" class="col-md-4 mb-4">
     <div class="card">
-      <img [src]="residence.image" class="card-img-top" alt="{{ residence.name }}" />
+      <img [src]="residence.image" class="card-img-top" alt="{{ residence.name | uppercase }}" />
       <div class="card-body">
         <h3 class="card-title">{{ residence.name }}</h3>
         <h3 class="card-text">

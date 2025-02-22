@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FirstComponent } from './first/first.component';
 import { HeaderComponent } from './header/header.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ResidencesComponent } from './Residencess/residences/residences.component';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
@@ -28,7 +28,6 @@ import { ApartmentsComponent } from './Apartments/apartments/apartments.componen
     NotFoundComponent,
     ResidencesDetailsComponent,
     AddResidenceComponent,
-
     ApartmentsByResidenceComponent,
     AddApartmentComponent,
     ApartmentsComponent,
@@ -36,7 +35,8 @@ import { ApartmentsComponent } from './Apartments/apartments/apartments.componen
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
