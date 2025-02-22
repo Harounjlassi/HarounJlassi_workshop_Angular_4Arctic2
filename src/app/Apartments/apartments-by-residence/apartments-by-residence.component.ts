@@ -23,7 +23,7 @@ export class ApartmentsByResidenceComponent {
       terrace: false,
       surfaceterrace: 0,
       category: 'B',
-      ResidenceId: 2,
+      ResidenceId: 1,
     },
     { apartNum :3,  
       floorNum: 3,

@@ -1,15 +1,49 @@
-<p>apartments works!</p>
 
-<div class="row">
-    <div *ngFor="let apartment of listApartments; let i = index" class="col-md-4 mb-4">
-      <div class="card">
-        <div class="card-body">
-          <h3 class="card-title">{{ apartment.apartNum }}</h3>
-          <p>{{ apartment.apartNum }}</p>
-    
-          
-          
+<div class="d-grid gap-2">
+    <button class="btn btn-outline-success" type="button">Add new Apartment </button>
+  
+  </div>
+
+  <div class="container mt-5">
+    <div class="row gy-4">
+      <div *ngFor="let apartment of listApartments" class="col-md-4">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <h4 class="card-title text-primary">
+              Apartment {{ apartment.apartNum }}
+            </h4>
+            <ul class="list-unstyled">
+              <li>
+                <i class="bi bi-house-fill me-2 text-success"></i>
+                <strong>Number:</strong> {{ apartment.apartNum }}
+              </li>
+              <li>
+                <i class="bi bi-tag-fill me-2 text-info"></i>
+                <strong>Category:</strong> {{ apartment.category }}
+              </li>
+              <li>
+                <i class="bi bi-building me-2 text-warning"></i>
+                <strong>Floor:</strong> {{ apartment.floorNum }}
+              </li>
+              <li>
+                <i class="bi bi-arrows-fullscreen me-2 text-danger"></i>
+                <strong>Surface:</strong> {{ apartment.surface }} m²
+              </li>
+              <li>
+                <i class="bi bi-tree me-2 text-success"></i>
+                <strong>Terrace Surface:</strong> {{ apartment.surfaceterrace }} m²
+              </li>
+              <li>
+                <i class="bi bi-sun-fill me-2 text-primary"></i>
+                <strong>Terrace:</strong> {{ apartment.terrace }}
+              </li>
+            </ul>
+          </div>
+          <div class="card-footer bg-transparent border-0 text-center">
+            <button class="btn btn-outline-primary">View Details</button>
+          </div>
         </div>
       </div>
     </div>
   </div>
+  
