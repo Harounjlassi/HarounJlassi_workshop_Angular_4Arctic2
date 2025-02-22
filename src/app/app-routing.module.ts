@@ -11,6 +11,7 @@ import { ResidencesDetailsComponent } from './Residencess/residences-details/res
 import { AddResidenceComponent } from './Residencess/add-residence/add-residence.component';
 import { ApartmentsByResidenceComponent } from './Apartments/apartments-by-residence/apartments-by-residence.component';
 import { ApartmentsComponent } from './Apartments/apartments/apartments.component';
+import { AddApartmentComponent } from './Apartments/add-apartment/add-apartment.component';
 
 const ROUTES: Routes = [ 
   {path:'',redirectTo:'/app',pathMatch:'full'},
@@ -20,6 +21,7 @@ const ROUTES: Routes = [
   {path:'residences',component:ResidencesComponent},
   {path:'details/:id',component:ResidencesDetailsComponent},
   {path:'add-residence',component:AddResidenceComponent},
+  {path:'add-apartment',component:AddApartmentComponent},
   {path:'apartments',component:ApartmentsComponent},
   {path:'apartments-by-residence/:id',component:ApartmentsByResidenceComponent},
   {path:'**',component:NotFoundComponent},

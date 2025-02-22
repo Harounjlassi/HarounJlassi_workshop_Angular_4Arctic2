@@ -1,1 +1,58 @@
-<p>add-apartment works!</p>
+<p class="text-success">add-apartment works!</p>
+
+<form [formGroup]="apartForm" (ngSubmit)="onSubmit()" class="p-4 border rounded shadow-sm bg-light">
+  <div class="mb-3">
+    <label for="apartmentNumber" class="form-label">Apartment Number</label>
+    <input id="apartmentNumber" formControlName="apartmentNumber" type="text" class="form-control" placeholder="Enter apartment number">
+    <div class="text-danger mt-1" *ngIf="apartForm.get('apartmentNumber')?.invalid && apartForm.get('apartmentNumber')?.touched">
+      {{ getErrorMessage('apartmentNumber') }}
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label for="floorNumber" class="form-label">Floor Number</label>
+    <input id="floorNumber" formControlName="floorNumber" type="text" class="form-control" placeholder="Enter floor number">
+    <div class="text-danger mt-1" *ngIf="apartForm.get('floorNumber')?.invalid && apartForm.get('floorNumber')?.touched">
+      {{ getErrorMessage('floorNumber') }}
+    </div>
+  </div>
+
+  <div class="mb-3 form-check">
+    <input id="terrace" formControlName="terrace" type="checkbox" class="form-check-input">
+    <label for="terrace" class="form-check-label">Terrace</label>
+  </div>
+
+  <div class="mb-3">
+    <label for="surfaceTerrace" class="form-label">Surface Terrace</label>
+    <input id="surfaceTerrace" formControlName="surfaceTerrace" type="text" class="form-control" placeholder="Enter surface terrace">
+    <div class="text-danger mt-1" *ngIf="apartForm.get('surfaceTerrace')?.invalid && apartForm.get('surfaceTerrace')?.touched">
+      {{ getErrorMessage('surfaceTerrace') }}
+    </div>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Category:</label>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" id="categoryS1" formControlName="category" value="S+1">
+      <label class="form-check-label" for="categoryS1">S+1</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" id="categoryS2" formControlName="category" value="S+2">
+      <label class="form-check-label" for="categoryS2">S+2</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" id="categoryS3" formControlName="category" value="S+3">
+      <label class="form-check-label" for="categoryS3">S+3</label>
+    </div>
+  </div>
+  
+
+  <div class="mb-3">
+    <label for="residence" class="form-label">Residence</label>
+    <input id="residence" formControlName="residence" type="text" class="form-control" placeholder="Enter residence">
+    <div class="text-danger mt-1" *ngIf="apartForm.get('residence')?.invalid && apartForm.get('residence')?.touched">
+      {{ getErrorMessage('residence') }}
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary" [disabled]="apartForm.invalid">Add Apartment</button>
+</form>

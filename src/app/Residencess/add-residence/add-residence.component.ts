@@ -7,12 +7,12 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./add-residence.component.css']
 })
 export class AddResidenceComponent {
-  apartForm!:FormGroup;
+  residenceForm!:FormGroup;
   constructor(){}
 
   ngOnInit(){
 
-    this.apartForm= new FormGroup({
+    this.residenceForm= new FormGroup({
       name: new FormControl('', [Validators.required,Validators.pattern("^[A-Z][a-z]+$")]),
       address: new FormControl('',[Validators.required,Validators.minLength(15),Validators.maxLength(50)]),
       status: new FormControl('',Validators.required),
@@ -22,19 +22,19 @@ export class AddResidenceComponent {
   }
 
   onSubmit(){
-     console.log(this.apartForm.value);
+     console.log(this.residenceForm.value);
 
-    alert('SUCCESS\n\n'+ JSON.stringify(this.apartForm.value,null,4));
+    alert('SUCCESS\n\n'+ JSON.stringify(this.residenceForm.value,null,4));
 
   }
 
 
   get name(){
-    return this.apartForm.get('name')
+    return this.residenceForm.get('name')
   }
 
   test(){
-    return console.log(this.apartForm.get('name')?.value)
+    return console.log(this.residenceForm.get('name')?.value)
   }
   
 
