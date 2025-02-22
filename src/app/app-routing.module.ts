@@ -18,7 +18,8 @@ const ROUTES: Routes = [
   {path:'home',component:ResidencesComponent},
   {path:'residences',component:ResidencesComponent},
   {path:'details/:id',component:ResidencesDetailsComponent},
-  {path:'add',component:AddResidenceComponent},
+  {path:'add-residence',component:AddResidenceComponent},
+  {path:'apartments-by-residence',component:ResidencesComponent},
   {path:'**',component:NotFoundComponent},
   
 ];

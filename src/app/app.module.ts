@@ -15,6 +15,9 @@ import { ApartmentsComponentComponent } from './Apartments/apartments-component/
 import { ApartmentsByResidenceComponentComponent } from './Apartments/apartments-by-residence-component/apartments-by-residence-component.component';
 import { AddApartmentComponentComponent } from './Apartments/add-apartment-component/add-apartment-component.component';
 import { ResidencesDetailsComponent } from './Residencess/residences-details/residences-details.component';
+import { ApartmentsByResidenceComponent } from './Apartments/apartments-by-residence/apartments-by-residence.component';
+import { AddApartmentComponent } from './Apartments/add-apartment/add-apartment.component';
+import { ApartmentsComponent } from './Apartments/apartments/apartments.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +34,9 @@ import { ResidencesDetailsComponent } from './Residencess/residences-details/res
     ApartmentsComponentComponent,
     ApartmentsByResidenceComponentComponent,
     AddApartmentComponentComponent,
+    ApartmentsByResidenceComponent,
+    AddApartmentComponent,
+    ApartmentsComponent,
   ],
   imports: [
     BrowserModule,

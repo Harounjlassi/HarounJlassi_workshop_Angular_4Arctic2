@@ -20,10 +20,12 @@
             <button class="btn btn-outline-secondary" (click)="navigateToDetails(res?.id)">
                 -> Next
             </button>
-            <button class="btn btn-outline-secondary" (click)="navigateToDetails(res?.id)">
+            <button class="btn btn-outline-secondary"  [routerLink]="['/add-residence']">
+              + Update Residence
+
           </button>
           <br>
-          <button class="btn btn-outline-primary" (click)="navigateToAdComponement()">
+          <button class="btn btn-outline-secondary" [routerLink]="['/add-residence']">
             + Add Residence
           </button>
           </div>
