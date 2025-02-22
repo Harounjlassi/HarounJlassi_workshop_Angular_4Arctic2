@@ -69,4 +69,10 @@ this.res=this.listResidences.filter(res=>res.id==this.id)[0]
 
 
   }
+  navigateToAdComponement() {
+
+    this.router.navigate(['/add'], { queryParamsHandling: 'merge' });
+
+
+  }
 }

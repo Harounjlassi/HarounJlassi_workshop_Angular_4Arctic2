@@ -10,7 +10,7 @@
           <span *ngIf="res?.status === 'En Construction'" class="badge bg-warning">🚧 En Construction</span>
         </h3>
         <div class="d-grid gap-2">
-          <div class="d-flex gap-2 justify-content-start">
+          <div class="d-flex gap-1 justify-content-start">
 
             <button class="btn btn-primary" (click)="showAddress(res?.address||'')">
               📍 Show Location
@@ -20,6 +20,12 @@
             <button class="btn btn-outline-secondary" (click)="navigateToDetails(res?.id)">
                 -> Next
             </button>
+            <button class="btn btn-outline-secondary" (click)="navigateToDetails(res?.id)">
+          </button>
+          <br>
+          <button class="btn btn-outline-primary" (click)="navigateToAdComponement()">
+            + Add Residence
+          </button>
           </div>
         
           
