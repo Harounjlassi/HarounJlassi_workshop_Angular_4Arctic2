@@ -1,1 +1,15 @@
 <p>apartments works!</p>
+
+<div class="row">
+    <div *ngFor="let apartment of listApartments; let i = index" class="col-md-4 mb-4">
+      <div class="card">
+        <div class="card-body">
+          <h3 class="card-title">{{ apartment.apartNum }}</h3>
+          <p>{{ apartment.apartNum }}</p>
+    
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>

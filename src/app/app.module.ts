@@ -11,9 +11,6 @@ import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { AddResidenceComponent } from './Residencess/add-residence/add-residence.component';
-import { ApartmentsComponentComponent } from './Apartments/apartments-component/apartments-component.component';
-import { ApartmentsByResidenceComponentComponent } from './Apartments/apartments-by-residence-component/apartments-by-residence-component.component';
-import { AddApartmentComponentComponent } from './Apartments/add-apartment-component/add-apartment-component.component';
 import { ResidencesDetailsComponent } from './Residencess/residences-details/residences-details.component';
 import { ApartmentsByResidenceComponent } from './Apartments/apartments-by-residence/apartments-by-residence.component';
 import { AddApartmentComponent } from './Apartments/add-apartment/add-apartment.component';
@@ -31,9 +28,7 @@ import { ApartmentsComponent } from './Apartments/apartments/apartments.componen
     NotFoundComponent,
     ResidencesDetailsComponent,
     AddResidenceComponent,
-    ApartmentsComponentComponent,
-    ApartmentsByResidenceComponentComponent,
-    AddApartmentComponentComponent,
+
     ApartmentsByResidenceComponent,
     AddApartmentComponent,
     ApartmentsComponent,

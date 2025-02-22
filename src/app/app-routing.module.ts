@@ -9,7 +9,8 @@ import { ResidencesComponent } from './Residencess/residences/residences.compone
 import { Residence } from './model/Residence';
 import { ResidencesDetailsComponent } from './Residencess/residences-details/residences-details.component';
 import { AddResidenceComponent } from './Residencess/add-residence/add-residence.component';
-const routes: Routes = [];
+import { ApartmentsByResidenceComponent } from './Apartments/apartments-by-residence/apartments-by-residence.component';
+import { ApartmentsComponent } from './Apartments/apartments/apartments.component';
 
 const ROUTES: Routes = [ 
   {path:'',redirectTo:'/app',pathMatch:'full'},
@@ -19,7 +20,8 @@ const ROUTES: Routes = [
   {path:'residences',component:ResidencesComponent},
   {path:'details/:id',component:ResidencesDetailsComponent},
   {path:'add-residence',component:AddResidenceComponent},
-  {path:'apartments-by-residence',component:ResidencesComponent},
+  {path:'apartments',component:ApartmentsComponent},
+  {path:'apartments-by-residence/:id',component:ApartmentsByResidenceComponent},
   {path:'**',component:NotFoundComponent},
   
 ];
