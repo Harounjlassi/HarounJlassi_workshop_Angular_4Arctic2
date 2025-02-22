@@ -18,6 +18,8 @@ export class AddApartmentComponent {
       terrace: [false],
       surfaceTerrace: [{ value: '', disabled: true }, [Validators.pattern('^[0-9]+$')]],
       residence: ['', Validators.required],
+      category: ['S+1']  // Default selected value
+
     });
 
     // Enable or disable surface terrace field based on terrace checkbox
